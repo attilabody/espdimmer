@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name ESPDimmer)(type Legacy)(uri /mnt/userdata/compi/work/private/kicad/espdimmer/espdimmer-cache.lib)(options "")(descr ""))
+  (lib (name buck)(type Legacy)(uri ${KIPRJMOD}/buck.lib)(options "")(descr ""))
+)
