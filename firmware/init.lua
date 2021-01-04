@@ -36,9 +36,23 @@ wifi.eventmon.register(wifi.eventmon.STA_GOT_IP, function(T)
     T.netmask.."\n\tGW: "..T.gateway)
     end)
 
+if file.open("dimmer.cfg", "r") then
+  cfgstr = file.readline()
+  file.close()
+  if cfgstr ~= nil then
+    f = cfgstr:gmatch("%S+")
+    ssid = f()
+    pwd = f()
+  end
+end
+
+if ssid == nil then ssid = "default" end
+if pwd == nil then pwd = "password" end
+
+print("Connecting to AP "..ssid)
 
 wifi.setmode(wifi.STATION)
-wifi.sta.config({ssid="iotwifi", pwd="iotpassword"})
+wifi.sta.config({ssid=ssid, pwd=pwd})
  
 srv = net.createServer(net.TCP) 
 srv:listen(80,function(conn) 
