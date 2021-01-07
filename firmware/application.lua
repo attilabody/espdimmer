@@ -1,36 +1,48 @@
 local module = {}
-m = nil
-pt = nil
+local m = nil
+local pt = tmr.create()
+local rt = tmr.create()
 
--- Sends a simple ping to the broker
-local function send_ping()
-    m:publish(config.ENDPOINT .. "ping","id=" .. config.ID,0,0)
+local function on_message_received(conn, topic, data)
+  if data ~= nil then
+    print(topic .. ": " .. data)
+    -- do something, we have received a message
+  end
 end
 
--- Sends my id to the broker for registration
-local function register_myself()
-    m:subscribe(config.ENDPOINT .. config.ID,0,function(conn)
-        print("Successfully subscribed to data endpoint")
-    end)
+local function on_client_connected(client)
+  m:subscribe(config.ENDPOINT .. config.ID, 0,
+    function(conn) print("Successfully subscribed to data endpoint") end
+  )
+  pt:unregister()
+  pt:alarm(5000, tmr.ALARM_AUTO,
+    function() m:publish(config.ENDPOINT .. "ping","id=" .. config.ID,0,0) end
+  )
+end
+
+local function on_client_cannot_connect(client, reason)
+  print("Cannot connect to MQTT gateway "..config.HOST..".")
+  rt:alarm(10000, tmr.ALARM_SINGLE, function()
+      m:connect(config.HOST, config.PORT, false, on_client_connected, on_client_cannot_connect)
+  end)
 end
 
 local function mqtt_start()
-    pt = tmr.create()
+  if m == nil then
     m = mqtt.Client(config.ID, 120)
     -- register message callback beforehand
-    m:on("message", function(conn, topic, data) 
-      if data ~= nil then
-        print(topic .. ": " .. data)
-        -- do something, we have received a message
-      end
+    m:on("message", on_message_received) 
+    m:on("offline", function(client)
+        print("offline")
+        pt:unregister()
+        mqtt_start()
     end)
-    -- Connect to broker
-    m:connect(config.HOST, config.PORT, false, function(con) 
-        register_myself()
-        -- And then pings each 1000 milliseconds
-        pt:alarm(1000, tmr.ALARM_AUTO, send_ping)
-    end) 
-
+  else
+    rt:unregister()
+    m:close()
+  end
+  -- Connect to broker
+  m:connect(config.HOST, config.PORT, false, on_client_connected, on_client_cannot_connect)
 end
 
 function module.start()
