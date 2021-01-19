@@ -1,4 +1,4 @@
-update=2021. jan. 10., vasárnap, 00:22:10 CET
+update=Mon 18 Jan 2021 11:27:42 PM CET
 version=1
 last_client=kicad
 [general]
@@ -243,7 +243,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.2
+Clearance=0.25
 TrackWidth=0.3
 ViaDiameter=0.8
 ViaDrill=0.4
@@ -254,8 +254,8 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=PWR
-Clearance=0.2
-TrackWidth=2
+Clearance=0.25
+TrackWidth=1.8
 ViaDiameter=1.6
 ViaDrill=0.8
 uViaDiameter=0.3
@@ -265,7 +265,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/2]
 Name=VCC
-Clearance=0.2
+Clearance=0.25
 TrackWidth=0.5
 ViaDiameter=0.9
 ViaDrill=0.5

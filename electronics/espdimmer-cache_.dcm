@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BUCK_3P
+D Generic buck converter module
+K buck converter module
+$ENDCMP
+#
+#End Doc Library

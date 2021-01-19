@@ -1,4 +1,4 @@
 (fp_lib_table
-  (lib (name ESPDimmer)(type KiCad)(uri ${KIPRJMOD}/ESPDimmer.pretty)(options "")(descr ""))
   (lib (name ESP8266)(type KiCad)(uri ${ESPLIB}/ESP8266.pretty)(options "")(descr ""))
+  (lib (name Buck)(type KiCad)(uri ${KIPRJMOD}/Buck.pretty)(options "")(descr ""))
 )
