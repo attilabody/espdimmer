@@ -1,0 +1,52 @@
+substitutions:
+  hostname: "dimmer"
+  friendly_name: "Dimmer"
+
+esphome:
+  name: $hostname
+  platform: esp8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret station_ssid
+  password: !secret station_password
+  fast_connect: true
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "$hostname"
+    password: !secret ap_password
+
+captive_portal:
+
+web_server:
+  port: 80
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  safe_mode: True
+  password: !secret ota_password
+
+output:
+  - platform: esp8266_pwm
+    pin: 0
+    frequency: 500 Hz
+    id: pwm_1
+  - platform: esp8266_pwm
+    pin: 2
+    frequency: 500 Hz
+    id: pwm_2
+
+light:
+  - platform: monochromatic
+    output: pwm_1
+    name: "dimmer-1"
+  - platform: monochromatic
+    output: pwm_2
+    name: "dimmer-2"
+

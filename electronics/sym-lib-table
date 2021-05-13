@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name ESPDimmer)(type Legacy)(uri ${KIPRJMOD}/espdimmer-cache.lib)(options "")(descr ""))
   (lib (name Buck)(type Legacy)(uri ${KIPRJMOD}/Buck.lib)(options "")(descr ""))
+  (lib (name espdimmer-rescue)(type Legacy)(uri ${KIPRJMOD}/espdimmer-rescue.lib)(options "")(descr ""))
 )
