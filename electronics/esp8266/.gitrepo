@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/jdunmire/kicad-ESP8266.git
+	branch = master
+	commit = 1f3d2c6e49285d4ab4976efc04913bd3974290c1
+	parent = 520a9f869557d9c7d5f3ba5f324c9fb90f864458
+	method = merge
+	cmdver = 0.4.3
