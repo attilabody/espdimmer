@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L espdimmer-rescue:ESP-01v090-ESP-8266 U1
-U 1 1 5FDE3173
-P 5600 3700
-F 0 "U1" H 5600 3850 50  0000 C CNN
-F 1 "ESP-01v090" H 5600 3650 50  0000 C CNN
-F 2 "ESP8266:ESP-01" H 5600 3700 50  0001 C CNN
-F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 5600 3700 50  0001 C CNN
-	1    5600 3700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Q_NMOS_GDS Q1
 U 1 1 5FDE6355
 P 7300 4050
@@ -540,6 +529,17 @@ F 1 "GND" H 8455 4377 50  0000 C CNN
 F 2 "" H 8450 4550 50  0001 C CNN
 F 3 "" H 8450 4550 50  0001 C CNN
 	1    8450 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L esp8266:ESP-01v090 U1
+U 1 1 609D5C23
+P 5600 3700
+F 0 "U1" H 5600 3850 50  0000 C CNN
+F 1 "ESP-01v090" H 5600 3600 50  0000 C CNN
+F 2 "ESP8266:ESP-01" H 5600 3700 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 5600 3700 50  0001 C CNN
+	1    5600 3700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
