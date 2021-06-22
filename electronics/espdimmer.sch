@@ -210,23 +210,23 @@ Wire Wire Line
 $Comp
 L Connector:Screw_Terminal_01x02 J9
 U 1 1 5FE61684
-P 8700 3450
-F 0 "J9" H 8850 3350 50  0000 C CNN
-F 1 "LED1" H 8900 3450 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8700 3450 50  0001 C CNN
-F 3 "~" H 8700 3450 50  0001 C CNN
-	1    8700 3450
+P 9050 3450
+F 0 "J9" H 9200 3350 50  0000 C CNN
+F 1 "LED1" H 9250 3450 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9050 3450 50  0001 C CNN
+F 3 "~" H 9050 3450 50  0001 C CNN
+	1    9050 3450
 	1    0    0    1   
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J10
 U 1 1 5FE62049
-P 8700 3750
-F 0 "J10" H 8900 3650 50  0000 C CNN
-F 1 "LED2" H 8900 3750 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8700 3750 50  0001 C CNN
-F 3 "~" H 8700 3750 50  0001 C CNN
-	1    8700 3750
+P 9050 3750
+F 0 "J10" H 9250 3650 50  0000 C CNN
+F 1 "LED2" H 9250 3750 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9050 3750 50  0001 C CNN
+F 3 "~" H 9050 3750 50  0001 C CNN
+	1    9050 3750
 	1    0    0    1   
 $EndComp
 $Comp
@@ -243,16 +243,16 @@ $EndComp
 $Comp
 L power:+3.3V #PWR010
 U 1 1 5FE69127
-P 6950 2750
-F 0 "#PWR010" H 6950 2600 50  0001 C CNN
-F 1 "+3.3V" H 6965 2923 50  0000 C CNN
-F 2 "" H 6950 2750 50  0001 C CNN
-F 3 "" H 6950 2750 50  0001 C CNN
-	1    6950 2750
+P 6950 2450
+F 0 "#PWR010" H 6950 2300 50  0001 C CNN
+F 1 "+3.3V" H 6965 2623 50  0000 C CNN
+F 2 "" H 6950 2450 50  0001 C CNN
+F 3 "" H 6950 2450 50  0001 C CNN
+	1    6950 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6950 2750 6950 2950
+	6950 2450 6950 2950
 Connection ~ 6950 2950
 Wire Wire Line
 	3750 3500 3750 3650
@@ -290,58 +290,54 @@ Wire Wire Line
 	6950 4100 6950 4050
 Connection ~ 6950 4050
 Wire Wire Line
-	8500 3450 7400 3450
-Wire Wire Line
 	7400 3450 7400 3850
 Wire Wire Line
-	5750 3100 5750 2900
+	5750 3100 5750 2550
 Wire Wire Line
 	6650 2950 6150 2950
 Wire Wire Line
-	5650 2950 5650 2900
+	5650 2950 5650 2550
 Wire Wire Line
 	4550 2950 5550 2950
 Wire Wire Line
-	5550 2950 5550 2900
+	5550 2950 5550 2550
 $Comp
 L Connector_Generic:Conn_01x02 J6
 U 1 1 5FEBA2DD
-P 6150 2700
-F 0 "J6" V 6250 2650 50  0000 C CNN
-F 1 "Motion" V 6150 2900 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6150 2700 50  0001 C CNN
-F 3 "~" H 6150 2700 50  0001 C CNN
-	1    6150 2700
+P 6150 2350
+F 0 "J6" V 6250 2300 50  0000 C CNN
+F 1 "Motion" V 6150 2550 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6150 2350 50  0001 C CNN
+F 3 "~" H 6150 2350 50  0001 C CNN
+	1    6150 2350
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
 	8000 4250 8000 4550
 Wire Wire Line
-	8500 3150 8450 3150
+	8850 3150 8750 3150
 Wire Wire Line
-	8450 3150 8450 4550
+	8750 3150 8750 4550
 Wire Wire Line
-	8450 3150 8450 2850
+	8750 3150 8750 2850
 Wire Wire Line
-	8450 2850 8500 2850
-Connection ~ 8450 3150
+	8750 2850 8850 2850
+Connection ~ 8750 3150
 Wire Wire Line
-	8500 3650 8350 3650
+	8850 3650 8600 3650
 Wire Wire Line
-	8350 3650 8350 3050
+	8600 3050 8850 3050
 Wire Wire Line
-	8350 3050 8500 3050
+	8850 3350 8500 3350
 Wire Wire Line
-	8500 3350 8250 3350
+	8500 2750 8850 2750
 Wire Wire Line
-	8250 2750 8500 2750
-Wire Wire Line
-	6150 2900 6150 2950
+	6150 2550 6150 2950
 Connection ~ 6150 2950
 Wire Wire Line
 	6150 2950 5650 2950
 Wire Wire Line
-	6050 2900 6050 3100
+	6050 2550 6050 3100
 $Comp
 L power:GND #PWR08
 U 1 1 5FF59A40
@@ -356,34 +352,32 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x03 J5
 U 1 1 5FE252C1
-P 5650 2700
-F 0 "J5" V 5750 2750 50  0000 R CNN
-F 1 "UART" V 5650 3100 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5650 2700 50  0001 C CNN
-F 3 "~" H 5650 2700 50  0001 C CNN
-	1    5650 2700
+P 5650 2350
+F 0 "J5" V 5750 2400 50  0000 R CNN
+F 1 "UART" V 5650 2750 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5650 2350 50  0001 C CNN
+F 3 "~" H 5650 2350 50  0001 C CNN
+	1    5650 2350
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J7
 U 1 1 5FF5CAAF
-P 8700 2850
-F 0 "J7" H 8850 2750 50  0000 C CNN
-F 1 "PWR1" H 8900 2850 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8700 2850 50  0001 C CNN
-F 3 "~" H 8700 2850 50  0001 C CNN
-	1    8700 2850
+P 9050 2850
+F 0 "J7" H 9200 2750 50  0000 C CNN
+F 1 "PWR1" H 9250 2850 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9050 2850 50  0001 C CNN
+F 3 "~" H 9050 2850 50  0001 C CNN
+	1    9050 2850
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	2500 3050 2500 3650
+	2500 2750 2500 3650
 Wire Wire Line
-	2500 3050 7900 3050
+	2500 2750 7900 2750
 Wire Wire Line
-	8250 3350 8250 3050
-Connection ~ 8250 3050
-Wire Wire Line
-	8250 3050 8250 2750
+	8500 3350 8500 2750
+Connection ~ 8500 2750
 $Comp
 L Device:CP_Small C1
 U 1 1 5FFA4758
@@ -396,18 +390,18 @@ F 3 "~" H 3750 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 3750 8000 3750
+	8850 3750 8000 3750
 Wire Wire Line
 	8000 3750 8000 3850
 $Comp
 L Connector:Screw_Terminal_01x02 J8
 U 1 1 5FE24A4C
-P 8700 3150
-F 0 "J8" H 8850 3050 50  0000 C CNN
-F 1 "PWR2" H 8900 3150 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8700 3150 50  0001 C CNN
-F 3 "~" H 8700 3150 50  0001 C CNN
-	1    8700 3150
+P 9050 3150
+F 0 "J8" H 9200 3050 50  0000 C CNN
+F 1 "PWR2" H 9250 3150 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 9050 3150 50  0001 C CNN
+F 3 "~" H 9050 3150 50  0001 C CNN
+	1    9050 3150
 	1    0    0    1   
 $EndComp
 $Comp
@@ -423,10 +417,8 @@ F 3 "" H 4200 3450 50  0001 L CNN
 $EndComp
 Wire Wire Line
 	7400 4250 7400 4550
-Text Label 8250 2750 0    50   ~ 0
+Text Label 8500 2750 0    50   ~ 0
 PWR1
-Text Label 8350 3050 3    50   ~ 0
-PWR2
 $Comp
 L Device:R_Small R5
 U 1 1 600883F6
@@ -446,16 +438,16 @@ Wire Wire Line
 $Comp
 L Device:D_Small D1
 U 1 1 600C3ECC
-P 8000 3050
-F 0 "D1" H 8000 3255 50  0000 C CNN
-F 1 "SS14" H 8000 3164 50  0000 C CNN
-F 2 "Diode_SMD:D_SMA_Handsoldering" V 8000 3050 50  0001 C CNN
-F 3 "~" V 8000 3050 50  0001 C CNN
-	1    8000 3050
+P 8000 2750
+F 0 "D1" H 8000 2955 50  0000 C CNN
+F 1 "SS14" H 8000 2864 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" V 8000 2750 50  0001 C CNN
+F 3 "~" V 8000 2750 50  0001 C CNN
+	1    8000 2750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8100 3050 8250 3050
+	8100 2750 8500 2750
 Wire Wire Line
 	2500 4050 2500 3650
 Connection ~ 2500 3650
@@ -523,12 +515,12 @@ $EndComp
 $Comp
 L power:GND #PWR0105
 U 1 1 600FD215
-P 8450 4550
-F 0 "#PWR0105" H 8450 4300 50  0001 C CNN
-F 1 "GND" H 8455 4377 50  0000 C CNN
-F 2 "" H 8450 4550 50  0001 C CNN
-F 3 "" H 8450 4550 50  0001 C CNN
-	1    8450 4550
+P 8750 4550
+F 0 "#PWR0105" H 8750 4300 50  0001 C CNN
+F 1 "GND" H 8755 4377 50  0000 C CNN
+F 2 "" H 8750 4550 50  0001 C CNN
+F 3 "" H 8750 4550 50  0001 C CNN
+	1    8750 4550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -542,4 +534,29 @@ F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all
 	1    5600 3700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Jumper:Jumper_2_Bridged JP1
+U 1 1 60A05F3F
+P 8100 3000
+F 0 "JP1" H 8100 3103 50  0000 C CNN
+F 1 "Jumper_2_Bridged" H 8100 3104 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 8100 3000 50  0001 C CNN
+F 3 "~" H 8100 3000 50  0001 C CNN
+	1    8100 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 3050 8600 3650
+Text Label 8600 3050 3    50   ~ 0
+PWR2
+Wire Wire Line
+	7400 3450 8850 3450
+Wire Wire Line
+	7800 3000 7900 3000
+Wire Wire Line
+	8400 3000 8300 3000
+Text Label 7800 3000 0    50   ~ 0
+PWR1
+Text Label 8400 3000 2    50   ~ 0
+PWR2
 $EndSCHEMATC
